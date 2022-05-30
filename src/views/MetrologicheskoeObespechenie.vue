@@ -25,11 +25,11 @@
           </router-link>
         </div>
         <div class="block-services-body__item">
-          <router-link class="list-submenu__item" to="/">
+          <a href="https://drive.google.com/file/d/15T20fInbR8iAWHGm-lNrCaHe8rNTb1lq/preview" target="_blank" class="list-submenu__item">
             <div class="block-services-body__title">
               ПЕРЕЧЕНЬ СРЕДСТВ ИЗМЕРЕНИЯ
             </div>
-          </router-link>
+          </a>
         </div>
       </div>
     </Container>

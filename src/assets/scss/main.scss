@@ -22,6 +22,11 @@ font-family: 'Roboto', sans-serif;
 .active-link{
    text-decoration: underline;
 }
+.wrapper {
+   overflow: hidden;
+   min-height: 100vh;
+   padding-top: 70px;
+ }
 body.fixed{
    overflow: hidden;
 }

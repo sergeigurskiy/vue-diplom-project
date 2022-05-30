@@ -18,14 +18,14 @@
           <div class="block-services-body__title">ДОКУМЕНТЫ</div>
         </div>
         <div class="block-services-body__item">
-          <div class="block-services-body__title">
+          <a href="https://drive.google.com/file/d/1avO2sDitY7aEGpYXYA3gVNZolEEIIfga/preview" target="_blank" class="block-services-body__title">
             СТП 05-2011 ДИПЛОМНЫЕ РАБОТЫ
-          </div>
+          </a>
         </div>
         <div class="block-services-body__item">
-          <div class="block-services-body__title">
+          <a href="https://drive.google.com/file/d/1jJqlo5SossLtExTI6xkYjrpnGq5WE0m-/preview" target="_blank" class="block-services-body__title">
             СТП 04-2011 КУРСОВЫЕ РАБОТЫ
-          </div>
+          </a>
         </div>
       </div>
     </Container>

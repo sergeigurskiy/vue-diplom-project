@@ -2,7 +2,7 @@
   <div class="wrapper-sotrudniki">
     <div class="wrapper-sotrudniki__infa right_distance bottom_distance">
       <div class="wrapper-sotrudniki__infa__image">
-        <img src="../assets/img/image1.jpg" />
+        <img src="../assets/img/employees/01.jpg" />
       </div>
       <ul class="wrapper-sotrudniki__infa__text">
         <li class="dolznost">Начальник:</li>
@@ -12,7 +12,7 @@
     </div>
     <div class="wrapper-sotrudniki__infa bottom_distance">
       <div class="wrapper-sotrudniki__infa__image">
-        <img src="../assets/img/image2.jpg" />
+        <img src="../assets/img/employees/02.jpg" />
       </div>
       <ul class="wrapper-sotrudniki__infa__text">
         <li class="dolznost">Ведущий специалист:</li>
@@ -22,7 +22,7 @@
     </div>
     <div class="wrapper-sotrudniki__infa right_distance">
       <div class="wrapper-sotrudniki__infa__image">
-        <img src="../assets/img/image4.jpg" />
+        <img src="../assets/img/employees/03.jpg" />
       </div>
       <ul class="wrapper-sotrudniki__infa__text">
         <li class="dolznost">Ведущий специалист:</li>
@@ -32,7 +32,7 @@
     </div>
     <div class="wrapper-sotrudniki__infa">
       <div class="wrapper-sotrudniki__infa__image">
-        <img src="../assets/img/image3.jpg" />
+        <img src="../assets/img/employees/04.jpg" />
       </div>
       <ul class="wrapper-sotrudniki__infa__text">
         <li class="dolznost">Ведущий инженер:</li>
@@ -65,6 +65,7 @@
       & img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
       }
     }
     &__text {

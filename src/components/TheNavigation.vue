@@ -87,16 +87,20 @@
           <ul class="list-submenu">
             <li class="list-submenu__link">
               <a class="list-submenu__item" href="#"
-                >ПОЛИТИКА ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ</a
+                >Национальное регулирование</a
               >
             </li>
             <li class="list-submenu__link">
-              <a class="list-submenu__item" href="#">ОБРАЗЕЦ РЕЕСТРА ПДн</a>
+              <a class="list-submenu__item" href="#">Локальные НПА</a>
             </li>
             <li class="list-submenu__link">
               <a class="list-submenu__item" href="#"
-                >ЗАКОН РЕСПУБЛИКИ БЕЛАРУСЬ ОТ 07.05.2021 №99-З “О ЗАЩИТЕ
-                ПЕРСОНАЛЬНЫХ ДАННЫХ”</a
+                >Информационная безопасность</a
+              >
+            </li>
+            <li class="list-submenu__link">
+              <a class="list-submenu__item" href="#"
+                >Внутренний контроль</a
               >
             </li>
           </ul>
@@ -114,15 +118,9 @@ export default {
   methods: {
     openDropdown(e) {
       e.preventDefault();
-      let coll = Array.from(
-        document.querySelectorAll(".list-menu__link--dropdown")
-      );
+      let coll = Array.from(document.querySelectorAll(".list-menu__link--dropdown"));
       let arrows = Array.from(document.querySelectorAll(".list-menu__arrow"));
-      if (
-        (e.target.classList.contains("list-menu__item") ||
-          e.target.classList.contains("list-menu__arrow")) &&
-        e.target.closest(".list-menu__link--dropdown")
-      ) {
+      if ((e.target.classList.contains("list-menu__item") || e.target.classList.contains("list-menu__arrow")) && e.target.closest(".list-menu__link--dropdown")){
         let parent = e.target.closest(".list-menu__link");
         let arrow = parent.querySelector(".list-menu__arrow");
         if (parent.classList.contains("open")) {
@@ -134,6 +132,8 @@ export default {
           parent.classList.add("open");
           arrow.classList.add("active");
         }
+      } else {
+        this.$emit('handlerClose')
       }
     },
   },

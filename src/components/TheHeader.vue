@@ -41,6 +41,11 @@ export default {
   width: 100%;
   z-index: 5;
   background-color: #fff;
+  -webkit-box-shadow: 0px 0px 8px rgba(0,0,0,.8);
+     -moz-box-shadow: 0px 0px 8px rgba(0,0,0,.8);
+      -ms-box-shadow: 0px 0px 8px rgba(0,0,0,.8);
+       -o-box-shadow: 0px 0px 8px rgba(0,0,0,.8);
+      box-shadow: 0px 0px 8px rgba(0,0,0,.4);
   top: 0;
   &__body {
     display: flex;
@@ -78,7 +83,6 @@ export default {
   &-menu {
     color: #040844;
     cursor: pointer;
-    overflow: hidden;
   }
 }
 </style>

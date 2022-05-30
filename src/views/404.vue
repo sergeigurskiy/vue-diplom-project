@@ -1,30 +1,48 @@
 <template>
-  <TheHeader />
+<div class="wrapper">
+  <TheHeader :isOpen="isOpen" @handlerOpen="handlerOpen" />
+  <Plashka :styles="isOpen ? 'open' : ''" @handlerClose="handlerClose" />
+  <TheNavigation
+      :styles="isOpen ? 'open' : ''"
+      @handlerClose="handlerClose"
+    />
   <div class="wrapper-error">
-    <h1 class="wrapper-error__title">страница не найдена</h1>
+   <div class="wrapper-error__body">
+      <h1 class="wrapper-error__title">страница не найдена</h1>
     <div class="wrapper-error__image">
       <img src="../assets/img/Error.png" alt="" />
     </div>
     <router-link to="/" class="wrapper-error__button"
       >Вернуться на главную страницу</router-link
     >
+   </div>
   </div>
+</div>
 </template>
 
 <script>
 import TheHeader from "../components/TheHeader.vue";
+import Plashka from "../components/Plashka.vue";
+import TheNavigation from "../components/TheNavigation.vue";
+import listMixin from '../mixins/listMixin'
 export default {
+  mixins:[listMixin],
   components: {
     TheHeader,
+    Plashka,
+    TheNavigation
   },
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .wrapper-error {
-  width: 506px;
-  margin: 0 auto;
-  margin-top: 35px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 38px 0 20px 0;
+  box-sizing: border-box;
   &__title {
     font-weight: 600;
     font-size: 20px;
@@ -34,12 +52,12 @@ export default {
     color: #040844;
   }
   &__image {
-    width: 506px;
-    height: 391px;
+    max-width: 506px;
+    max-height: 391px;
     margin: 30px 0px 45px;
   }
   &__image img {
-    width: 100%;
+    max-width: 100%;
     height: 100%;
   }
   &__button {
