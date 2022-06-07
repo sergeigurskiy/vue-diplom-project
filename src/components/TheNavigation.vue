@@ -20,9 +20,9 @@
           >
         </li>
         <li class="list-menu__link list-menu__link--dropdown">
-          <a class="list-menu__item" href="#"
+          <div class="list-menu__item"
             >СТАНДАРТИЗАЦИЯ <span class="list-menu__arrow"></span
-          ></a>
+          ></div>
           <ul class="list-submenu">
             <li class="list-submenu__link">
               <router-link to="/fond_tnpa" class="list-submenu__item" href="#"
@@ -40,50 +40,72 @@
               <a class="list-submenu__item" href="#">ДОКУМЕНТЫ</a>
             </li>
             <li class="list-submenu__link">
-              <a class="list-submenu__item" href="#"
+              <a href="https://drive.google.com/file/d/1avO2sDitY7aEGpYXYA3gVNZolEEIIfga/preview" target="_blank" class="list-submenu__item"
                 >СТП 05-2011 ДИПЛОМНЫЕ РАБОТЫ</a
               >
             </li>
             <li class="list-submenu__link">
-              <a class="list-submenu__item" href="#"
+              <a class="list-submenu__item" href="https://drive.google.com/file/d/1jJqlo5SossLtExTI6xkYjrpnGq5WE0m-/preview" target="_blank"
                 >СТП 04-2011 КУРСОВЫЕ РАБОТЫ</a
               >
             </li>
           </ul>
         </li>
-        <li class="list-menu__link">
-          <a
+        <li class="list-menu__link list-menu__link--dropdown">
+          <div
             class="list-menu__item"
-            href="https://www.gsu.by/ru/quality-management-system"
-            target="_blank"
-            >МЕНЕДЖМЕНТ КАЧЕСТВА</a
-          >
+            >МЕНЕДЖМЕНТ КАЧЕСТВА <span class="list-menu__arrow"></span
+            ></div>
+            <ul class="list-submenu">
+              <li class="list-submenu__link">
+                <a class="list-submenu__item" href="https://drive.google.com/file/d/19j8zVizUB-pfnl1-WWhzLUNHDx2eo4oC/preview" target="_blank">О СМК университета</a>
+              </li>
+              <li class="list-submenu__link">
+                <a class="list-submenu__item" href="https://www.gsu.by/node/2181" target="_blank"
+                  >Документы СМК университета</a
+                >
+              </li>
+              <li class="list-submenu__link">
+                <a class="list-submenu__item" href="https://drive.google.com/file/d/1yHR4O8bCTCce90pb7tanwpdVqvpwSodo/preview" target="_blank"
+                  >Анкетирование. Удовлетворенность потребителей </a
+                >
+              </li>
+              <li class="list-submenu__link">
+                <a class="list-submenu__item" href="https://drive.google.com/file/d/13DsYpjAryZg9gBX6N0Ae3zwjSQzW6FYS/preview" target="_blank"
+                  > сертификация СМК</a
+                >
+              </li>
+          </ul>
         </li>
         <li class="list-menu__link list-menu__link--dropdown">
-          <a class="list-menu__item" href="#"
+          <div class="list-menu__item"
             >МЕТРОЛОГИЧЕСКОЕ ОБЕСПЕЧЕНИЕ <span class="list-menu__arrow"></span
-          ></a>
+          ></div>
           <ul class="list-submenu">
             <li class="list-submenu__link">
-              <a class="list-submenu__item" href="#">ГРАФИКИ ПОВЕРКИ СИ</a>
+              <a class="list-submenu__item" href="#">нормативные документы</a>
             </li>
             <li class="list-submenu__link">
               <a class="list-submenu__item" href="#"
-                >ОБРАЗЕЦ АКТА МЕТРОЛОГИЧЕСКОГО ОБЕСПЕЧЕНИЯ НИР</a
+                >перечень СИ ГГУ</a
               >
             </li>
             <li class="list-submenu__link">
               <a class="list-submenu__item" href="#"
-                >ОБРАЗЕЦ СПИСКА УЧЕБНОГО (НАУЧНОГО) ОБОРУДОВАНИЯ (СРЕДСТВ
-                ИЗМЕРЕНИЯ)</a
+                >Метрологические  оценки СИ</a
+              >
+            </li>
+            <li class="list-submenu__link">
+              <a class="list-submenu__item" href="#"
+                >метрологические проработки НИР</a
               >
             </li>
           </ul>
         </li>
         <li class="list-menu__link list-menu__link--dropdown">
-          <a class="list-menu__item" href="#"
+          <div class="list-menu__item"
             >ЗАЩИТА ПЕРСОНАЛЬНЫХ ДАННЫХ <span class="list-menu__arrow"></span
-          ></a>
+          ></div>
           <ul class="list-submenu">
             <li class="list-submenu__link">
               <a class="list-submenu__item" href="#"
@@ -117,7 +139,6 @@
 export default {
   methods: {
     openDropdown(e) {
-      e.preventDefault();
       let coll = Array.from(document.querySelectorAll(".list-menu__link--dropdown"));
       let arrows = Array.from(document.querySelectorAll(".list-menu__arrow"));
       if ((e.target.classList.contains("list-menu__item") || e.target.classList.contains("list-menu__arrow")) && e.target.closest(".list-menu__link--dropdown")){
@@ -133,7 +154,9 @@ export default {
           arrow.classList.add("active");
         }
       } else {
-        this.$emit('handlerClose')
+        if(!(e.target.classList.contains('list-menu') || e.target.classList.contains('list-menu__link--dropdown'))){
+          this.$emit('handlerClose')
+        }
       }
     },
   },
@@ -174,6 +197,7 @@ export default {
     }
     &__item {
       font-size: 20px;
+      cursor: pointer;
       line-height: 27px;
       letter-spacing: 0.03em;
       color: #fff;
@@ -181,6 +205,7 @@ export default {
       display: flex;
       align-items: center;
       text-transform: uppercase;
+      user-select:none;
       @media (max-width: 768px) {
         font-size: 16px;
         line-height: 22px;

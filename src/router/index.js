@@ -13,38 +13,39 @@ const routes = [
       },
       {
         path: "/osnovnye_napravleniya_deyatelnosti",
-        alias: "/",
-        component: () => import("../views/Activity.vue"),
+        component: () => import("../views/ActivityPage.vue"),
       },
       {
         path: "/sotrudniki",
-        alias: "/",
-        component: () => import("../views/Sotrudniki.vue"),
+        component: () => import("../views/EmployeesPage.vue"),
       },
       {
         path: "/fond_tnpa",
-        alias: "/",
         component: () => import("../views/FondTnpa.vue"),
       },
       {
         path: "/periodicheskie_izdaniya",
-        alias: "/",
-        component: () => import("../views/Periodicheskie.vue"),
+        component: () => import("../views/PeriodicalPage.vue"),
       },
       {
         path: "/standartizatsiya",
-        alias: "/",
         component: () => import("../views/Standartizatsiya.vue"),
       },
       {
         path: "/metrologicheskoe_obespechenie",
-        alias: "/",
-        component: () => import("../views/MetrologicheskoeObespechenie.vue"),
+        component: () => import("../views/MetrologicSupport.vue"),
+      },
+      {
+        path: "/quality_menegment",
+        component: () => import("../views/QualManagementPage.vue"),
       },
       {
         path: "/zashchita_personal_dannykh",
-        alias: "/",
         component: () => import("../views/ZashchitaPersonalDannykh.vue"),
+      },
+      {
+        path: "/localData",
+        component: () => import("../views/localPage.vue"),
       },
     ],
   },

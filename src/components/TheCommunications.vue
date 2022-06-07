@@ -1,6 +1,5 @@
 <template>
-  <section class="block-communications">
-    <Container>
+  <div class="block-communications">
       <div class="info-title">Контактная информация</div>
       <div class="block-communications-body">
         <div class="block-communications-body__connect">
@@ -57,12 +56,10 @@
           />
         </div>
       </div>
-    </Container>
-  </section>
+  </div>
 </template>
 
 <script>
-import Container from "../components/Container.vue";
 import Map from "../components/Map.vue";
 import imgGguScorina from "../assets/img/gguPhoto.jpg";
 export default {
@@ -90,7 +87,6 @@ export default {
     };
   },
   components: {
-    Container,
     Map,
   },
 };
@@ -98,7 +94,7 @@ export default {
 
 <style lang="scss" scoped>
 .block-communications {
-  padding: 0 0 64px 0;
+  padding: 120px 0 64px 0;
   &-body {
     display: flex;
     text-align: center;
@@ -161,7 +157,7 @@ export default {
     box-sizing: border-box;
   }
   .block-communications {
-    padding: 0 0 20px 0;
+    padding: 60px 0 20px 0;
   }
 }
 @media (max-width: 425px) {

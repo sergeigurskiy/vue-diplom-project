@@ -6,11 +6,9 @@
     </div>
 </template>
 
-
 <style lang="scss" scoped>
     .main-img{
         display: flex;
-        margin-bottom: 50px;
     }
     .img-body{
         width: 100%;

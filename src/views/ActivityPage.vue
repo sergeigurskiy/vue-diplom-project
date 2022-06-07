@@ -1,5 +1,6 @@
 <template>
-  <section class="action">
+<div class="block-page">
+  <Container>
     <div class="action-title">Основные направления деятельности</div>
     <ol class="action-text">
       <li>
@@ -40,8 +41,18 @@
         персональных данных в университете
       </li>
     </ol>
-  </section>
+  </Container>
+</div>
 </template>
+<script>
+import Container from '../components/Container.vue'
+  export default {
+    components:{
+        Container
+
+    }
+  }
+</script>
 
 <style lang="scss">
 .action {

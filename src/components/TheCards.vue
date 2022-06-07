@@ -1,70 +1,62 @@
 <template>
-  <Container>
-    <div class="block-info-body">
-      <div class="block-info-body__column">
-        <router-link to="/standartizatsiya">
-          <div class="block-info-body__item">
-            <div class="block-info-body__img">
-              <img src="../assets/img/cards/01.svg" alt="" />
-            </div>
-            <div class="block-info-body__title">СТАНДАРТИЗАЦИЯ</div>
+  <div class="block-card">
+    <div class="block-card__column">
+      <router-link to="/standartizatsiya">
+        <div class="block-card__item">
+          <div class="block-card__img">
+            <img src="../assets/img/cards/01.svg" alt="" />
           </div>
-        </router-link>
-      </div>
-
-      <div class="block-info-body__column">
-        <a
-          href="https://www.gsu.by/ru/quality-management-system"
-          target="_blank"
-        >
-          <div class="block-info-body__item">
-            <div class="block-info-body__img">
-              <img src="../assets/img/cards/02.svg" alt="" />
-            </div>
-            <div class="block-info-body__title">МЕНЕДЖЕМЕНТ КАЧЕСТВА</div>
-          </div>
-        </a>
-      </div>
-
-      <div class="block-info-body__column">
-        <router-link to="/metrologicheskoe_obespechenie">
-          <div class="block-info-body__item">
-            <div class="block-info-body__img">
-              <img src="../assets/img/cards/03.svg" alt="" />
-            </div>
-            <div class="block-info-body__title">
-              МЕТРОЛОГИЧЕСКОЕ ОБЕСПЕЧЕНИЕ
-            </div>
-          </div>
-        </router-link>
-      </div>
-
-      <div class="block-info-body__column">
-        <router-link to="/zashchita_personal_dannykh">
-          <div class="block-info-body__item">
-            <div class="block-info-body__img">
-              <img src="../assets/img/cards/04.svg" alt="" />
-            </div>
-            <div class="block-info-body__title">ЗАЩИТА ПЕРСОНАЛЬНЫХ ДАННЫХ</div>
-          </div>
-        </router-link>
-      </div>
+          <div class="block-card__title">СТАНДАРТИЗАЦИЯ</div>
+        </div>
+      </router-link>
     </div>
-  </Container>
+    <div class="block-card__column">
+      <router-link to="/quality_menegment"
+      >
+        <div class="block-card__item">
+          <div class="block-card__img">
+            <img src="../assets/img/cards/02.svg" alt="" />
+          </div>
+          <div class="block-card__title">МЕНЕДЖЕМЕНТ КАЧЕСТВА</div>
+        </div>
+      </router-link>
+    </div>
+
+    <div class="block-card__column">
+      <router-link to="/metrologicheskoe_obespechenie">
+        <div class="block-card__item">
+          <div class="block-card__img">
+            <img src="../assets/img/cards/03.svg" alt="" />
+          </div>
+          <div class="block-card__title">
+            МЕТРОЛОГИЧЕСКОЕ ОБЕСПЕЧЕНИЕ
+          </div>
+        </div>
+      </router-link>
+    </div>
+
+    <div class="block-card__column">
+      <router-link to="/zashchita_personal_dannykh">
+        <div class="block-card__item">
+          <div class="block-card__img">
+            <img src="../assets/img/cards/04.svg" alt="" />
+          </div>
+          <div class="block-card__title">ЗАЩИТА ПЕРСОНАЛЬНЫХ ДАННЫХ</div>
+        </div>
+      </router-link>
+    </div>
+  </div>
 </template>
 
 <script>
-import Container from "../components/Container.vue";
 
 export default {
-  components: {
-    Container,
-  },
+  
 };
 </script>
 
 <style lang="scss" scoped>
-.block-info-body {
+.block-card {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -22px;
@@ -85,6 +77,7 @@ export default {
     padding: 75px 5px 10px;
     min-width: 260px;
     min-height: 310px;
+    height: 100%;
     cursor: pointer;
     border-top: 5px solid transparent;
     transition: 0.2s ease all;
@@ -121,15 +114,15 @@ export default {
   }
 }
 @media (max-width: 600px) {
-  .block-info-body__title {
+  .block-card__title {
     font-size: 18px;
     line-height: 25px;
   }
-  .block-info-body__desc {
+  .block-card__desc {
     font-size: 16px;
     line-height: 19px;
   }
-  .block-info-body__img {
+  .block-card__img {
     height: 45px;
     width: 45px;
   }

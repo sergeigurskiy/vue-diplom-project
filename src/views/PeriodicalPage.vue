@@ -1,5 +1,7 @@
 <template>
-  <section class="pereodicheakie">
+  <div class="block-page">
+    <Container>
+      <div class="pereodicheakie">
     <div class="pereodicheakie-title">
       Бюро стандартизации и метрологии располагает следующими периодическими
       изданиями:
@@ -43,13 +45,22 @@
         <img src="../assets/img/image6.jpg" alt="" />
       </div>
     </div>
-  </section>
+  </div>
+    </Container>
+  </div>
 </template>
+
+<script>
+import Container from '../components/Container.vue'
+export default {
+  components:{
+    Container
+  }
+}
+</script>
 
 <style lang="scss">
 .pereodicheakie {
-  width: 1293px;
-  margin: 0 auto;
   &-title {
     font-weight: 700;
     font-size: 32px;

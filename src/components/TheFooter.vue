@@ -1,5 +1,5 @@
 <template>
-    <footer class="block-footer">
+    <div class="block-footer">
         <Container>
             <div class="block-footer__body">
                 <div class="block-footer__contacts">
@@ -9,7 +9,7 @@
                 <div class="block-footer__place">Адрес: 246019, г. Гомель, ул. Советская, 102 (учебный корпус № 5, каб. 3-6, 3-9, 3-8)</div>
             </div>
         </Container>
-    </footer>
+    </div>
 </template>
 
 <script>

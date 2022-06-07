@@ -1,6 +1,5 @@
 <template>
-  <section class="block-info">
-    <Container>
+  <div class="block-info">
       <div class="block-info__wrapp">
         <div class="block-info__desc">
           <div class="block-info__title">Общая информация</div>
@@ -25,16 +24,12 @@
           </div>
         </div>
       </div>
-    </Container>
-  </section>
+  </div>
 </template>
 
 <script>
-import Container from "../components/Container.vue";
 export default {
-  components: {
-    Container,
-  },
+  
 };
 </script>
 

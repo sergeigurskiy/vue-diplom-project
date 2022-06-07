@@ -1,6 +1,7 @@
 <template>
+<div class="block-page">
   <Container>
-    <section class="fondTnpa">
+    <div class="fondTnpa">
       <h2 class="fondTnpa-title">
         Новые поступления ТНПА и справочно-информационных источников:
       </h2>
@@ -1911,8 +1912,9 @@
           среды и природопользование. Основные термины и определения
         </li>
       </ol>
-    </section>
+    </div>
   </Container>
+</div>
 </template>
 
 <script>
