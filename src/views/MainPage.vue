@@ -1,10 +1,10 @@
 <template>
   <div class="wrapper">
-    <TheHeader :isOpen="isOpen" @handlerOpen="handlerOpen" />
+    <TheHeader :isOpen="open" @handlerOpen="handlerOpen" />
     <TheMainImg />
-    <Plashka :styles="isOpen ? 'open' : ''" @handlerClose="handlerClose" />
+    <Plashka :styles="open ? 'open' : ''" @handlerClose="handlerClose" />
     <TheNavigation
-      :styles="isOpen ? 'open' : ''"
+      :styles="open ? 'open' : ''"
       @handlerClose="handlerClose"
     />
     <router-view />
@@ -16,11 +16,11 @@
 import TheMainImg from "../components/TheMainImg.vue";
 import TheHeader from "../components/TheHeader.vue";
 import Plashka from "../components/Plashka.vue";
-import TheNavigation from "../components/TheNavigation.vue";
+import TheNavigation from "../components/Navigations/TheNavigation.vue";
 import TheFooter from "../components/TheFooter.vue";
-import listMixin from '../mixins/listMixin'
+import {activateNavigate} from '../mixins/activateNavigate'
 export default {
-  mixins:[listMixin],
+  mixins:[activateNavigate],
   components: {
     TheHeader,
     Plashka,

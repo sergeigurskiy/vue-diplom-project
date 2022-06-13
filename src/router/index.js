@@ -43,10 +43,6 @@ const routes = [
         path: "/zashchita_personal_dannykh",
         component: () => import("../views/ZashchitaPersonalDannykh.vue"),
       },
-      {
-        path: "/localData",
-        component: () => import("../views/localPage.vue"),
-      },
     ],
   },
   {
@@ -60,6 +56,9 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(){
+    return { left: 0, top: 0 };
+  },
   linkActiveClass: "active-link",
 });
 

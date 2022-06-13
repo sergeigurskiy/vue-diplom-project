@@ -17,9 +17,9 @@
           </div>
           <div class="block-emp-body__column">
             <div class="block-emp-body__item">
-              <div class="block-emp-body__image big-position">
+              <div class="block-emp-body__image">
                 <div class="block-emp-body__img">
-                  <img src="../assets/img/employees/02.jpg" alt="">
+                  <img src="../assets/img/employees/03.jpg" alt="">
                 </div>
               </div>
               <div class="block-emp-body__title">
@@ -29,9 +29,9 @@
           </div>
           <div class="block-emp-body__column">
             <div class="block-emp-body__item">
-              <div class="block-emp-body__image">
+              <div class="block-emp-body__image big-position">
                 <div class="block-emp-body__img">
-                  <img src="../assets/img/employees/03.jpg" alt="">
+                  <img src="../assets/img/employees/02.jpg" alt="">
                 </div>
               </div>
               <div class="block-emp-body__title">

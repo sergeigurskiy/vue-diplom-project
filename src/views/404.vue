@@ -23,10 +23,8 @@
 <script>
 import TheHeader from "../components/TheHeader.vue";
 import Plashka from "../components/Plashka.vue";
-import TheNavigation from "../components/TheNavigation.vue";
-import listMixin from '../mixins/listMixin'
+import TheNavigation from "../components/Navigations/TheNavigation.vue";
 export default {
-  mixins:[listMixin],
   components: {
     TheHeader,
     Plashka,
