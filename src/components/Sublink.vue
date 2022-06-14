@@ -64,7 +64,7 @@
         box-sizing: border-box;
         border-bottom: 2px solid transparent;
         cursor: pointer;
-        &:not(:last-child):hover{
+        &:hover{
             border-color: silver;
         }
     }

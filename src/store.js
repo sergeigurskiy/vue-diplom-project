@@ -61,10 +61,10 @@ export default createStore({
                     mapName:'metrologicSupport',
                     title:'Метрологическое обеспечение',
                     data:[
-                        {sublinks:null, id:1,title:"нормативные документы", href:null, to:null},
+                        {sublinks:null, id:1,title:"нормативные документы", href:'https://drive.google.com/file/d/1HSooShMZxY5t3f4LqOk_L_E5jDbuAybu/preview', to:null},
                         {sublinks:null, id:2,title:"перечень СИ ГГУ", href:null, to:null},
                         {sublinks:null, id:3,title:"Метрологические  оценки СИ", href:null, to:null},
-                        {sublinks:null, id:4,title:"метрологические проработки НИР", href:null, to:null},
+                        {sublinks:null, id:4,title:"образец акта метрологического обеспечения и проработки НИР", href:null, to:null},
                     ]
                 },
                 dataProtection:{
@@ -73,11 +73,12 @@ export default createStore({
                     data:[
                         {sublinks:null, id:1,title:"Национальное регулирование", href:null, to:null},
                         {id:2, isOpenDrop:false, title:"Локальные НПА", href:null, to:null, sublinks:[
-                            {id:1,title:"положение о ЗПДн ГГУ всех субъектов кроме обучающихся и абитуриентов", href:'https://drive.google.com/file/d/1TGDfj16J_o8r63hJpcGWT9hV7B2gZsKx/preview', to:null},
-                            {id:2,title:"положение о ЗПДн для обучающихся и абитуриентов", href:'https://drive.google.com/file/d/1LdNtDFshweHWAJSufO1JaE-cInayvcWR/preview', to:null},
-                            {id:3,title:"Приказ Положение ЗПДн обучающихся", href:'https://drive.google.com/file/d/1A5TdbXkLOKanuJYjvdGGJTyAi_UxJV7c/preview', to:null},
-                            {id:4,title:"Приказ Положение ЗПДн сотрудников", href:'https://drive.google.com/file/d/1GqN--4K3hazxpJjZx_gCv79fiZlMb3pk/preview', to:null},
-                            {id:5,title:"ПОЛИТИКА ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ В УЧРЕЖДЕНИИ ОБРАЗОВАНИЯ ГГУ. Скорины", href:'https://drive.google.com/file/d/1hAvoJ6pB0fR_rfrvsJN84A2acfEcD3F-/preview', to:null}
+                            {id:1,title:"ПОЛИТИКА ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ В УЧРЕЖДЕНИИ ОБРАЗОВАНИЯ ГГУ. Скорины", href:'https://drive.google.com/file/d/1hAvoJ6pB0fR_rfrvsJN84A2acfEcD3F-/preview', to:null},
+                            {id:2,title:"Приказ Положение ЗПДн обучающихся", href:'https://drive.google.com/file/d/1A5TdbXkLOKanuJYjvdGGJTyAi_UxJV7c/preview', to:null},
+                            {id:3,title:"Приказ Положение ЗПДн сотрудников", href:'https://drive.google.com/file/d/1GqN--4K3hazxpJjZx_gCv79fiZlMb3pk/preview', to:null},
+                            {id:4,title:"положение о ЗПДн ГГУ всех субъектов кроме обучающихся и абитуриентов", href:'https://drive.google.com/file/d/1TGDfj16J_o8r63hJpcGWT9hV7B2gZsKx/preview', to:null},
+                            {id:5,title:"положение о ЗПДн для обучающихся и абитуриентов", href:'https://drive.google.com/file/d/1LdNtDFshweHWAJSufO1JaE-cInayvcWR/preview', to:null},
+                            
                         ]},
                         {sublinks:null, id:3,title:"Информационная безопасность", href:null, to:null},
                         {sublinks:null, id:4,title:"Внутренний контроль", href:null, to:null},
@@ -94,7 +95,9 @@ export default createStore({
             state.dataLinks[map].data = openDrop(state.dataLinks[map].data, id)
         },
         redirectTo(state, {id, idLink}){
-            return redirect(state.navigateData, (id - 1), idLink)
+            console.log(id);
+            console.log(idLink);
+            return redirect(state.navigateData, (id - 1), idLink, null)
         },
         redirectLinks(state, {id, mapName, mainId}){
             return redirect(state.dataLinks, mapName, id, mainId)

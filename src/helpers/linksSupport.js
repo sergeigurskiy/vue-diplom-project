@@ -16,7 +16,12 @@ export function openDrop (state, id) {
 }
 
 export function redirect (state, count, idLink, mainId = null) {
-    const link = state[count].data[mainId - 1].sublinks[idLink - 1]
+    let link;
+    if(!mainId){
+        link = state[count].sublinks[idLink - 1]
+    } else {
+        link = state[count].data[mainId - 1].sublinks[idLink - 1]
+    }
     console.log(link);
     if(link.href){
         window.open(link.href)

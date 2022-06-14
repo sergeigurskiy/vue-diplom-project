@@ -76,7 +76,6 @@ export default {
     text-align: justify;
     font-size: 20px;
     line-height: 23px;
-    letter-spacing: 0.03em;
   }
 }
 @media (max-width: 1024px) {
