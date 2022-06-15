@@ -10,7 +10,7 @@
               </div>
               <div class="block-communications-body__title">Адрес:</div>
               <div class="block-communications-body__desc">
-                246019, г. Гомель, ул. Советская, 102 (учебный корпус № 5, каб.
+                246028, г. Гомель, ул. Советская, 102 (учебный корпус № 5, каб.
                 3-6, 3-9, 3-8)
               </div>
             </div>
@@ -23,9 +23,9 @@
               <div class="block-communications-body__title">
                 Электроная почта:
               </div>
-              <div class="block-communications-body__desc">
+              <a href= "mailto:aleshkevich@gsu.by" class="block-communications-body__desc">
                 aleshkevich@gsu.by
-              </div>
+              </a>
             </div>
           </div>
           <div class="block-communications-body__column">
@@ -110,6 +110,12 @@ export default {
       flex: 0 1 50%;
       &:not(:last-child) {
         margin-bottom: 30px;
+        transform: scale(1);
+        transition: .3s ease transform;
+      }
+      &:hover{
+        transform: scale(1.04);
+        transition: .3s ease transform;
       }
     }
     &__item {

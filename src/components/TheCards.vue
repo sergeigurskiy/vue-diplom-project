@@ -63,12 +63,14 @@ export default {
   text-align: center;
   justify-content: center;
   &__column {
+    transition: .2s ease transform;
     padding: 0 22px;
     box-sizing: border-box;
     flex: 0 1 25%;
     margin-bottom: 30px;
   }
   &__item {
+    transform: translateY(0);
     background: #f9f9f9;
     box-sizing: border-box;
     box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.3);
@@ -84,6 +86,7 @@ export default {
     &:hover {
       border-top: 5px solid #4971a1;
       transition: 0.2s ease all;
+      transform: translateY(-10px);
     }
   }
   &__img {

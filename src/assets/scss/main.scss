@@ -74,6 +74,8 @@ body.fixed{
    }
    &__item {
      position: relative;
+     transform: scale(1);
+     transition: .3s ease transform;
      min-height: 50px;
      background-color: #f1f1f1;
      border-radius: 20px;
@@ -89,6 +91,10 @@ body.fixed{
        width: 82.94px;
        background: #4971a1;
        border-radius: 20px;
+     }
+     &:hover{
+      transform: scale(1.02);
+      transition: .3s ease transform;
      }
    }
    &__title {

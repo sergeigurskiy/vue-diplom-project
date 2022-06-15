@@ -4,7 +4,7 @@
             <div class="block-footer__body">
                 <div class="block-footer__contacts">
                     <div class="block-footer__icon"><img src="../assets/img/footer/01.svg" alt=""><span>(0232) 50-38-23 </span></div>
-                    <div class="block-footer__icon"><img src="../assets/img/footer/02.svg" alt=""><span>aleshkevich@gsu.by </span></div>
+                    <div class="block-footer__icon"><img src="../assets/img/footer/02.svg" alt=""><a href="mailto:aleshkevich@gsu.by">aleshkevich@gsu.by</a></div>
                 </div>
                 <div class="block-footer__place">Адрес: 246019, г. Гомель, ул. Советская, 102 (учебный корпус № 5, каб. 3-6, 3-9, 3-8)</div>
             </div>
@@ -46,6 +46,9 @@ import Container from '../components/Container.vue'
                 max-width: 100%;
                 width: 20px;
                 height: 20px;
+            }
+            & a{
+                color: initial;
             }
         }
         &__body{
