@@ -2,7 +2,7 @@
       <div v-if="!errorLoading" :ref="id" :id="id">
         <div v-if="loader" class="map-loader"><span></span></div>
       </div>
-      <div v-else class="map-err">с картой что-то случилось...</div>
+      <div v-else class="map-err">Ошибка при загрузке карты, отсутствует подключение к итернету</div>
 </template>
 
 <script>

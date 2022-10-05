@@ -13,6 +13,7 @@ const routes = [
       },
       {
         path: "/osnovnye_napravleniya_deyatelnosti",
+        alias:"/",
         component: () => import("../views/ActivityPage.vue"),
       },
       {
@@ -54,7 +55,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(window.location.pathname),
+  history: createWebHistory(),
   routes,
   scrollBehavior(){
     return { left: 0, top: 0 };

@@ -3,54 +3,14 @@
     <div class="block-emp">
       <Container :empoloyess='"container--emp"'>
         <div class="block-emp-body">
-          <div class="block-emp-body__column">
-            <div class="block-emp-body__item">
-              <div class="block-emp-body__image">
-                <div class="block-emp-body__img">
-                  <img src="../assets/img/employees/01.jpg" alt="">
-                </div>
-              </div>
-              <div class="block-emp-body__title">
-                <span>Начальник:</span><span>АЛЕШКЕВИЧ Николай Александрович</span><span>(к. 5, ауд. 3-6)</span>
-              </div>
-            </div>
-          </div>
-          <div class="block-emp-body__column">
-            <div class="block-emp-body__item">
-              <div class="block-emp-body__image">
-                <div class="block-emp-body__img">
-                  <img src="../assets/img/employees/03.jpg" alt="">
-                </div>
-              </div>
-              <div class="block-emp-body__title">
-                <span>Ведущий специалист:</span><span>МАТЬКУНОВА Татьяна Владимировна</span><span>(к. 5, ауд. 3-6)</span>
-              </div>
-            </div>
-          </div>
-          <div class="block-emp-body__column">
-            <div class="block-emp-body__item">
-              <div class="block-emp-body__image big-position">
-                <div class="block-emp-body__img">
-                  <img src="../assets/img/employees/02.jpg" alt="">
-                </div>
-              </div>
-              <div class="block-emp-body__title">
-                <span>Ведущий специалист:</span><span>ЛОСЕВА Ольга Валентиновна</span><span>(к. 5, ауд. 3-6)</span>
-              </div>
-            </div>
-          </div>
-          <div class="block-emp-body__column">
-            <div class="block-emp-body__item">
-              <div class="block-emp-body__image">
-                <div class="block-emp-body__img">
-                  <img src="../assets/img/employees/04.jpg" alt="">
-                </div>
-              </div>
-              <div class="block-emp-body__title">
-                <span>Ведущий инженер:</span><span>КРАВЧЕНКО Владимир Владимирович</span><span>(к. 5)</span>
-              </div>
-            </div>
-          </div>
+          <EmployerPerson
+            v-for="(person, index) in employessPersons"
+            :key="person.name"
+            :jobName="person.jobName"
+            :name="person.name"
+            :place="person.place"
+            :src="require(`../assets/img/employees/0${index + 1}.jpg`)"
+          />
         </div>
       </Container>
     </div>
@@ -59,15 +19,22 @@
 
 <script>
 import Container from "../components/Container.vue";
+import EmployerPerson from '../components/EmployerPerson.vue'
 
   export default {
+    computed:{
+      employessPersons(){
+        return this.$store.getters.employessPersons
+      }
+    },
     components:{
-      Container
+      Container,
+      EmployerPerson
     }
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .block-emp-body{
   display: flex;
   flex-wrap: wrap;

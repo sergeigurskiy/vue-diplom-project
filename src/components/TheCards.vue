@@ -1,61 +1,30 @@
 <template>
   <div class="block-card">
-    <div class="block-card__column">
-      <router-link to="/standartizatsiya">
-        <div class="block-card__item">
-          <div class="block-card__img">
-            <img src="../assets/img/cards/01.svg" alt="" />
-          </div>
-          <div class="block-card__title">СТАНДАРТИЗАЦИЯ</div>
-        </div>
-      </router-link>
-    </div>
-    <div class="block-card__column">
-      <router-link to="/quality_menegment"
-      >
-        <div class="block-card__item">
-          <div class="block-card__img">
-            <img src="../assets/img/cards/02.svg" alt="" />
-          </div>
-          <div class="block-card__title">МЕНЕДЖЕМЕНТ КАЧЕСТВА</div>
-        </div>
-      </router-link>
-    </div>
-
-    <div class="block-card__column">
-      <router-link to="/metrologicheskoe_obespechenie">
-        <div class="block-card__item">
-          <div class="block-card__img">
-            <img src="../assets/img/cards/03.svg" alt="" />
-          </div>
-          <div class="block-card__title">
-            МЕТРОЛОГИЧЕСКОЕ ОБЕСПЕЧЕНИЕ
-          </div>
-        </div>
-      </router-link>
-    </div>
-
-    <div class="block-card__column">
-      <router-link to="/zashchita_personal_dannykh">
-        <div class="block-card__item">
-          <div class="block-card__img">
-            <img src="../assets/img/cards/04.svg" alt="" />
-          </div>
-          <div class="block-card__title">ЗАЩИТА ПЕРСОНАЛЬНЫХ ДАННЫХ</div>
-        </div>
-      </router-link>
-    </div>
+    <PageLink
+      v-for="(card, index) in pageCards"
+      :key="card.to"
+      :to="card.to"
+      :src="require(`../assets/img/cards/img0${index + 1}.svg`)"
+      :title="card.name"
+    />
   </div>
 </template>
 
 <script>
-
+import PageLink from './Navigations/PageLink.vue'
 export default {
-  
+  computed:{
+    pageCards(){
+      return this.$store.getters.pageCards
+    }
+  },
+  components:{
+    PageLink,
+  }
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .block-card {
   display: flex;
   flex-wrap: wrap;
@@ -106,6 +75,7 @@ export default {
     color: #040844;
     font-family: "Open-Sans", sans-serif;
     flex: 1 1 auto;
+    text-transform: uppercase;
   }
   &__desc {
     font-size: 20px;

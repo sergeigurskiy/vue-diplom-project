@@ -6,7 +6,7 @@
                     <div class="block-footer__icon"><img src="../assets/img/footer/01.svg" alt=""><span>(0232) 50-38-23 </span></div>
                     <div class="block-footer__icon"><img src="../assets/img/footer/02.svg" alt=""><a href="mailto:aleshkevich@gsu.by">aleshkevich@gsu.by</a></div>
                 </div>
-                <div class="block-footer__place">Адрес: 246019, г. Гомель, ул. Советская, 102 (учебный корпус № 5, каб. 3-6, 3-9, 3-8)</div>
+                <div class="block-footer__place">Адрес: 246028, г. Гомель, ул. Советская, 102 (учебный корпус № 5, каб. 3-6, 3-8, 3-9)</div>
             </div>
         </Container>
     </div>
